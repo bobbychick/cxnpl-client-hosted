@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div className="flex h-screen">
       <div className="m-auto text-center text-3xl bold pb-3">
+        <Image className="m-auto pb-10" src="/alec.png" alt="alec" width="256" height="256"></Image>
       <h1 className="pb-3">Welcome to Constance - Identity Management System by Constantinople</h1>
       <br/>
       {status === "authenticated" && session && (
