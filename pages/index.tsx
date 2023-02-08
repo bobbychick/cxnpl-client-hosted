@@ -9,12 +9,12 @@ export default function Home() {
 
   return (
     <div className="flex h-screen">
-      <div className="m-auto text-center text-3xl bold">
-      Welcome to Constance - Identity Management System by Constantinople
+      <div className="m-auto text-center text-3xl bold pb-3">
+      <h1 className="pb-3">Welcome to Constance - Identity Management System by Constantinople</h1>
       <br/>
       {status === "authenticated" && session && (
         <div className="grid grid-rows-2 gap-5">
-          Signed in as {session?.user?.email} <br/>
+          Signed in as: <h2 className="font-bold">{session?.user?.email} </h2><br/>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => signOut( {callbackUrl: `https://cxnpl-client-production.up.railway.app/`})}>Sign out</button>
           {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => signOut( {callbackUrl: `http://127.0.0.1:3000/`})}>Sign out</button> */}
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link href="/company"> View your company</Link></button>  
@@ -28,7 +28,6 @@ export default function Home() {
         
           Not signed in
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => signIn()}>Sign in for master users</button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link href="login">Click here to login as a user</Link></button>
         </div>
        )}
 

@@ -3,8 +3,5 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = {nextConfig,
-  images: {
-    domains: ["postimg.cc/"]
-  }
-}
+module.exports = nextConfig
+
